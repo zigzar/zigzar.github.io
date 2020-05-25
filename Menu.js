@@ -29,6 +29,7 @@ class Menu extends Phaser.Scene {
     }
     
 	create() {
+        this.sound.stopAll();
         var add = this.add;
         this.title = this.add.text(0, 0, "Рыцарь");
         var title = this.title;

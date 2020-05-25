@@ -33,6 +33,7 @@ class Main extends Phaser.Scene {
             } 
     
     create(){
+                this.sound.stopAll();
                 this.anims.create({ 
                     key: 'hero_idle',    
                     frames: this.anims.generateFrameNames('atlas', { 

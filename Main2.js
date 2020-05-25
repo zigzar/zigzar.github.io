@@ -35,6 +35,7 @@ class Main2 extends Phaser.Scene {
             } 
     
     create(){
+                this.sound.stopAll();
                 this.anims.create({ 
                     key: 'hero_idle',    
                     frames: this.anims.generateFrameNames('atlas', { 
@@ -226,7 +227,8 @@ class Main2 extends Phaser.Scene {
                         this.bat_idle.stop();
                         this.bat_attack.stop();
                         this.main.stop();
-                        this.scene.start("game over"); 
+                        var game = this;
+                        setTimeout(function() {game.scene.start("game over");}, 5); 
                     }
                 } else {
                     if (Math.abs(hero.x - bat.x) < 20) {
@@ -237,7 +239,8 @@ class Main2 extends Phaser.Scene {
                         this.bat_idle.stop();
                         this.bat_attack.stop();
                         this.main.stop();
-                        this.scene.start("game over"); 
+                        var game = this;
+                        setTimeout(function() {game.scene.start("game over");}, 5); 
                     }
                 }
                 

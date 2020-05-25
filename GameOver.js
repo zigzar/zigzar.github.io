@@ -30,6 +30,8 @@ class GameOver extends Phaser.Scene {
 	}
     
 	create() {
+        this.sound.stopAll();
+        
 		this.bg = this.add.image(0, 0, "background");
 		this.bg.x = config.width / 2;
         this.bg.y = config.height / 2;
@@ -44,6 +46,8 @@ class GameOver extends Phaser.Scene {
         
         this.gameOver = this.sound.add("game_over");
         this.gameOver.play();
+        this.death = this.sound.add("death");
+        this.death.play();
 	}
     
     update() {
