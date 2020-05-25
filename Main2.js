@@ -196,7 +196,7 @@ class Main2 extends Phaser.Scene {
                     if (heroAttacking && Math.abs(hero.x - slime.x) < 100 && hero.flipX == slime.flipX) {
                         score += 1;
                         scoreText.setText('Очки: ' + score);
-                        enemySpeed = score  / 5 + 0.3;
+                        enemySpeed = score  / 7 + 0.1;
                         poof = this.add.sprite(slime.x, slime.y, 'poof');
                         poof.play('poof', true);
                         setTimeout(function () {poof.destroy();}, 150);
@@ -208,7 +208,7 @@ class Main2 extends Phaser.Scene {
                 } else if (heroAttacking && Math.abs(hero.x - bat.x) < 100 && hero.flipX == bat.flipX) {
                         score += 1;
                         scoreText.setText('Очки: ' + score);
-                        enemySpeed = score  / 5 + 0.3;
+                        enemySpeed = score  / 7 + 0.1;
                         poof = this.add.sprite(bat.x, bat.y, 'poof');
                         poof.play('poof', true);
                         setTimeout(function () {poof.destroy();}, 150);

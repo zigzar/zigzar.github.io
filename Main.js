@@ -159,7 +159,7 @@ class Main extends Phaser.Scene {
                 if (heroAttacking && Math.abs(hero.x - slime.x) < 100 && hero.flipX == slime.flipX) {
                     score += 1;
                     scoreText.setText('Очки: ' + score);
-                    enemySpeed = score  / 5 + 0.3;
+                    enemySpeed = score  / 7 + 0.1;
                     poof = this.add.sprite(slime.x, slime.y, 'poof');
                     this.slime_idle.stop();
                     this.slime_attack.stop();
