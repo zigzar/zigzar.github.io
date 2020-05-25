@@ -1,5 +1,13 @@
 {"frames": {
 
+"bg_menu":
+{
+	"frame": {"x":724,"y":1122,"w":360,"h":480},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":360,"h":480},
+	"sourceSize": {"w":360,"h":480}
+},
 "bg_level_0":
 {
 	"frame": {"x":1448,"y":1122,"w":360,"h":480},
@@ -7,6 +15,62 @@
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":360,"h":480},
 	"sourceSize": {"w":360,"h":480}
+},
+"bg_level_1":
+{
+	"frame": {"x":1086,"y":1122,"w":360,"h":480},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":360,"h":480},
+	"sourceSize": {"w":360,"h":480}
+},
+"home_active":
+{
+	"frame": {"x":386,"y":0,"w":46,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":48},
+	"sourceSize": {"w":46,"h":48}
+},
+"home_inactive":
+{
+	"frame": {"x":286,"y":0,"w":46,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":48},
+	"sourceSize": {"w":46,"h":48}
+},
+"restart_active":
+{
+	"frame": {"x":536,"y":0,"w":46,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":48},
+	"sourceSize": {"w":46,"h":48}
+},
+"restart_inactive":
+{
+	"frame": {"x":586,"y":0,"w":46,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":48},
+	"sourceSize": {"w":46,"h":48}
+},
+"btn_active":
+{
+	"frame": {"x":879,"y":0,"w":120,"h":52},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":52},
+	"sourceSize": {"w":120,"h":52}
+},
+"btn_inactive":
+{
+	"frame": {"x":757,"y":0,"w":120,"h":52},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":52},
+	"sourceSize": {"w":120,"h":52}
 },
 "hero/hero_attack_0":
 {
@@ -207,6 +271,110 @@
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":86,"h":107},
 	"sourceSize": {"w":86,"h":107}
+},
+"bat/bat_idle_0":
+{
+	"frame": {"x":1005,"y":0,"w":120,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":94},
+	"sourceSize": {"w":120,"h":94}
+},
+"bat/bat_idle_1":
+{
+	"frame": {"x":1128,"y":0,"w":120,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":94},
+	"sourceSize": {"w":120,"h":94}
+},
+"bat/bat_idle_2":
+{
+	"frame": {"x":1250,"y":0,"w":120,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":94},
+	"sourceSize": {"w":120,"h":94}
+},
+"bat/bat_idle_3":
+{
+	"frame": {"x":1495,"y":0,"w":120,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":94},
+	"sourceSize": {"w":120,"h":94}
+},
+"bat/bat_idle_4":
+{
+	"frame": {"x":1374,"y":0,"w":120,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":94},
+	"sourceSize": {"w":120,"h":94}
+},
+"bat/bat_idle_5":
+{
+	"frame": {"x":1005,"y":0,"w":120,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":94},
+	"sourceSize": {"w":120,"h":94}
+},
+"bat/bat_attack_0":
+{
+	"frame": {"x":1739,"y":0,"w":120,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":94},
+	"sourceSize": {"w":120,"h":94}
+},
+"bat/bat_attack_1":
+{
+	"frame": {"x":0,"y":90,"w":120,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":94},
+	"sourceSize": {"w":120,"h":94}
+},
+"bat/bat_attack_2":
+{
+	"frame": {"x":0,"y":90,"w":120,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":94},
+	"sourceSize": {"w":120,"h":94}
+},
+"bat/bat_attack_3":
+{
+	"frame": {"x":142,"y":90,"w":120,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":94},
+	"sourceSize": {"w":120,"h":94}
+},
+"bat/bat_attack_4":
+{
+	"frame": {"x":142,"y":90,"w":120,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":94},
+	"sourceSize": {"w":120,"h":94}
+},
+"bat/bat_attack_5":
+{
+	"frame": {"x":142,"y":90,"w":120,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":94},
+	"sourceSize": {"w":120,"h":94}
+},
+"bat/bat_attack_6":
+{
+	"frame": {"x":142,"y":90,"w":120,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":94},
+	"sourceSize": {"w":120,"h":94}
 },
 "vfx/poof_0":
 {

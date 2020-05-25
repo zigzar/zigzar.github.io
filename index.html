@@ -2,134 +2,15 @@
 <html>
     <head>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.21.0/phaser.min.js"></script>
+        <script type="text/javascript" src="GameOver.js"></script>
+        <script type="text/javascript" src="Main2.js"></script>
+        <script type="text/javascript" src="Main.js"></script>
+        <script type="text/javascript" src="Menu.js"></script>
+        <script type="text/javascript" src="Load.js"></script>
+        <script type="text/javascript" src="game.js"></script>
         <title>Рыцарь</title>
     </head>
     <body>
         <div id="one_tap" style="text-align: center;"></div>
-        <script>
-            var bg;
-            var hero;
-            var heroShadow;
-            var heroAttacking = false;
-            var slime;
-            var slimeSpeed = 3;
-            function preload(){
-                this.load.atlas(
-                    'atlas',
-                    'atlas.png',
-                    'atlas.json'
-                );
-            }
-            function create(){
-                this.anims.create({ 
-                    key: 'hero_idle',    
-                    frames: this.anims.generateFrameNames('atlas', { 
-                        prefix: 'hero/hero_idle_', 
-                        end: 5
-                    }), 
-                    repeat: -1 
-                });
-                this.anims.create({ 
-                    key: 'hero_attack',  
-                    frames: this.anims.generateFrameNames('atlas', { 
-                        prefix: 'hero/hero_attack_',
-                        end: 5
-                    }), 
-                    repeat: -1
-                });
-                this.anims.create({ 
-                    key: 'slime_attack', 
-                    frames: this.anims.generateFrameNames('atlas', { 
-                        prefix: 'slime/slime_attack_', 
-                        end: 5
-                    }), 
-                    repeat: -1 
-                });
-                this.anims.create({ 
-                    key: 'poof', 
-                    frames: this.anims.generateFrameNames('atlas', { 
-                        prefix: 'vfx/poof_', 
-                        end: 5
-                    }), 
-                    repeat: -1 
-                });
-                
-                
-                bg = this.add.sprite(0, 0, 'atlas', 'bg_level_0');
-                bg.x = bg.width / 2;
-                bg.y = bg.height / 2;
-                
-                hero = this.add.sprite(0, 0, 'hero');
-                hero.x = bg.width / 2;
-                hero.y = bg.height / 2 + hero.height;
-                
-                heroShadow = this.add.sprite(0, 0, 'atlas', 'hero_shadow');
-                heroShadow.x = bg.width / 2;
-                heroShadow.y = hero.y + hero.height + heroShadow.height / 2;
-                
-                slime = this.add.sprite(0, hero.y + 10, 'slime');
-                slime.play('slime_attack');
-                
-                heroIdle();
-                this.input.on("pointerdown", heroAttack, this);
-            }
-            function update(){
-                if (slime.flipX) {
-                    slime.x -= slimeSpeed;
-                } else {
-                    slime.x += slimeSpeed;
-                }
-                
-                if (slime.anims.getCurrentKey() == 'poof') {
-                    slime.destroy();
-                    slime = this.add.sprite(0, hero.y + 10, 'slime');
-                    slime.flipX = Math.random() > 0.5;
-                    if (slime.flipX) {
-                        slime.x = bg.x * 2;
-                    } else {
-                        slime.x = 0;
-                    }
-                    slime.play('slime_attack');
-                }
-                
-                if (heroAttacking && Math.abs(hero.x - slime.x) < 100) {
-                    slime.play('poof', true);
-                }
-                
-                
-                if (Math.abs(hero.x - slime.x) < 20) {
-                    hero.play('poof', true);
-                    setTimeout(function() {
-                        hero.destroy();
-                        heroShadow.destroy();
-                    }, 250);
-                }
-                
-            }
-            
-            function heroIdle(){
-                hero.play('hero_idle');
-                heroAttacking = false;
-            }
-            function heroAttack(tap){
-                heroAttacking = true;
-                hero.flipX = tap.downX > bg.x;
-                hero.play('hero_attack', true); 
-                setTimeout(heroIdle, 350);
-            }
-            
-        new Phaser.Game({
-		    scene: {
-		      preload: preload,
-		      create: create,
-		      update: update,
-		    },
-		    physics: { default: 'arcade' },
-		    parent: 'one_tap',
-		    width: 360,
-		    height: 480,
-		    backgroundColor: '#000000',
-		  });  
-        </script>
     </body>
 </html>
