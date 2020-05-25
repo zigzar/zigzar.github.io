@@ -30,6 +30,8 @@ class GameOver extends Phaser.Scene {
 	}
     
 	create() {
+        score = 0;
+        enemySpeed = 1;
         this.sound.stopAll();
         
 		this.bg = this.add.image(0, 0, "background");
