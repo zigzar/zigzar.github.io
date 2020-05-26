@@ -1,3 +1,4 @@
+var cursors;
 var bg;
 var hero;
 var heroShadow;
@@ -28,7 +29,7 @@ class Main2 extends Phaser.Scene {
                 }
                 
                 heroAttacking = true;
-                hero.flipX = tap.downX > bg.x;
+                if (tap) hero.flipX = tap.downX > bg.x;
                 this.hit.play();
                 hero.play('hero_attack', true); 
                 setTimeout(this.heroIdle, 350);
@@ -117,6 +118,7 @@ class Main2 extends Phaser.Scene {
                 
                 this.heroIdle();
                 this.input.on("pointerdown", this.heroAttack, this);
+                cursors = this.input.keyboard.createCursorKeys();
         
                 this.main = this.sound.add("main");
                 this.main.play(musicCfg);
@@ -158,8 +160,16 @@ class Main2 extends Phaser.Scene {
                         }
                     }
                 }
-
                 
+                if (!heroAttacking) {
+                if (cursors.right.isDown) {
+                    hero.flipX = true;
+                    this.heroAttack();
+                } else if (cursors.left.isDown) {
+                    hero.flipX = false;
+                    this.heroAttack();
+                }
+                }
                 
                 if (killEnemy) {
                         if (isSlime) slime.destroy();

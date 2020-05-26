@@ -1,3 +1,4 @@
+var cursors;
 var bg;
 var hero;
 var heroShadow;
@@ -26,7 +27,7 @@ class Main extends Phaser.Scene {
                 }
                 
                 heroAttacking = true;
-                hero.flipX = tap.downX > bg.x;
+                if (tap) hero.flipX = tap.downX > bg.x;
                 this.hit.play();
                 hero.play('hero_attack', true); 
                 setTimeout(this.heroIdle, 350);
@@ -109,6 +110,7 @@ class Main extends Phaser.Scene {
                 
                 this.heroIdle();
                 this.input.on("pointerdown", this.heroAttack, this);
+                cursors = this.input.keyboard.createCursorKeys();
         
                 this.main = this.sound.add("main");
                 this.main.play(musicCfg);
@@ -125,6 +127,16 @@ class Main extends Phaser.Scene {
                     this.slime_attack.stop();
                     this.main.stop();
                     this.scene.start('main2');
+                }
+                
+                if (!heroAttacking) {
+                if (cursors.right.isDown) {
+                    hero.flipX = true;
+                    this.heroAttack();
+                } else if (cursors.left.isDown) {
+                    hero.flipX = false;
+                    this.heroAttack();
+                }     
                 }
                 
                 if (slime.flipX) {
