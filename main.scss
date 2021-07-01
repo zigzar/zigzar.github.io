@@ -1,0 +1,117 @@
+@import "bootstrap/scss/bootstrap";
+
+section, footer {
+	padding: 4em 0;
+}
+
+#main {
+	height: 80vh;
+	max-height: 500px;
+	background: rgb(36,155,147);
+	background: -webkit-radial-gradient(circle, rgba(36,155,147,.4) 0%, rgba(36,155,147,1) 100%);
+	background: -o-radial-gradient(circle, rgba(36,155,147,.4) 0%, rgba(36,155,147,1) 100%);
+	background: radial-gradient(circle, rgba(36,155,147,.4) 0%, rgba(36,155,147,1) 100%);
+}
+
+#main-wrapper {
+	background: url(img/main/main2.jpg);
+	background-position: center center;
+}
+
+#pros {
+	background-color: $green;
+	text-align: center;
+	h2 {
+		color: $secondary;
+	}
+	h5, p {
+		color: $white;
+	}
+}
+
+#examples {
+	
+}
+
+#cta {
+	color: $white;
+	background: url(img/main/pattern.png);
+}
+
+#photos-wrapper {
+	position: absolute;
+	height: 600px;
+	width: 100%;
+	background: $white;
+	background: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background: -o-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+footer {
+	background: $dark;
+	color: 	$white;
+}
+
+.photos {
+	z-index: -1;
+	position: relative;
+	height: 600px;
+	overflow: hidden;
+}
+
+.navbar {
+	background-color: $green;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+.dropdown-menu, .dropdown, .dropdown-item {
+	transition: .3s ease;
+}
+
+.cta {
+	width: 130px;
+}
+
+.cta-block {
+	color: $white;
+}
+
+.img-definition {
+	height: 300px;
+	object-fit: cover;
+	width: 100%;
+}
+
+.pros-icon {
+	width: 4em;
+	color: $white;
+}
+
+.footer-icon {
+	width: 	4em;
+	height: 4em;
+	opacity: .5;
+	transition: .3s;	
+	&:hover {
+		color: $primary;
+		opacity: 1;
+	}
+}
+
+.to-portfolio {
+	text-decoration: none;
+	color: #333;
+	&:after {
+		content: "->";
+		margin-left: .5em;
+		transition: .3s ease;
+	}
+	&:hover {
+		&:after {
+			margin-left: 1em;
+		}
+	}
+}
